@@ -53,7 +53,7 @@
     ind.style.height = tab.offsetHeight + 'px';
     ind.style.transform = `translate(${tab.offsetLeft}px, ${tab.offsetTop}px)`;
   };
-  const setPhoto = cat => $$('.svc-photo img').forEach(img => img.classList.toggle('is-active', img.dataset.cat === cat));
+  const setPhoto = cat => $$('.svc-photo figure').forEach(f => f.classList.toggle('is-active', f.dataset.cat === cat));
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.setAttribute('aria-selected', t === tab));

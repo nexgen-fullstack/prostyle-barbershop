@@ -541,8 +541,11 @@ def render(lang):
         panels.append(f'<ul class="svc-panel" role="tabpanel" id="panel-{cat}" aria-labelledby="tab-{cat}"{hidden}>{"".join(rows)}</ul>')
 
     svc_preview = "".join(f'<img src="{a(f"assets/img/{n}.webp")}" data-cat="{c}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async">' for c, (n, w, h) in SVC_IMG.items())
+    # фото показується повністю (contain), а краї заповнює розмита копія — обличчя не обрізаються
     svc_photos = "".join(
-        f'<img src="{a(f"assets/img/{n}.webp")}" data-cat="{c}" class="{"is-active" if i == 0 else ""}" alt="{escape(t["svc_cats"][c])} — Pro Style Barbershop Funchal" width="{w}" height="{h}" loading="lazy" decoding="async">'
+        f'<figure data-cat="{c}" class="{"is-active" if i == 0 else ""}">'
+        f'<img class="svc-ph-bg" src="{a(f"assets/img/{n}.webp")}" alt="" aria-hidden="true" width="{w}" height="{h}" loading="lazy" decoding="async">'
+        f'<img class="svc-ph-fg" src="{a(f"assets/img/{n}.webp")}" alt="{escape(t["svc_cats"][c])} — Pro Style Barbershop Funchal" width="{w}" height="{h}" loading="lazy" decoding="async"></figure>'
         for i, (c, (n, w, h)) in enumerate(SVC_IMG.items()))
 
     team = "".join(
