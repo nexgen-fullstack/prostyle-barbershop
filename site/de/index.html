@@ -47,12 +47,14 @@
     <svg class="crown" viewBox="0 0 64 44" aria-hidden="true"><path class="crown-path" d="M4 14l12 10L32 4l16 20 12-10-5 22H9L4 14Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="crown-base" d="M9 39h46" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>
     <div class="loader-word"><span>P</span><span>R</span><span>O</span><span>&nbsp;</span><span>S</span><span>T</span><span>Y</span><span>L</span><span>E</span></div>
     <div class="loader-bar"><i></i></div>
-    <p class="loader-sub">Der Stuhl wird vorbereitet</p>
+    <p class="loader-sub"><span>Der Stuhl wird vorbereitet</span><b class="loader-count">0</b></p>
   </div>
 </div>
+<div class="wipe" aria-hidden="true"><div class="wipe-gold"></div><div class="wipe-dark"><svg class="crown" viewBox="0 0 64 44" aria-hidden="true"><path class="crown-path" d="M4 14l12 10L32 4l16 20 12-10-5 22H9L4 14Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="crown-base" d="M9 39h46" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg></div></div>
 
 <div class="cursor" aria-hidden="true"><div class="cursor-dot"></div><div class="cursor-ring"><span class="cursor-label"></span></div></div>
 <div class="grain" aria-hidden="true"></div>
+<div class="svc-preview" aria-hidden="true"><img src="../assets/img/barber-at-work.webp" data-cat="cuts" alt="" width="900" height="1125" loading="lazy" decoding="async"><img src="../assets/img/team-elias.webp" data-cat="beard" alt="" width="544" height="544" loading="lazy" decoding="async"><img src="../assets/img/hero-team-sm.webp" data-cat="combo" alt="" width="640" height="960" loading="lazy" decoding="async"><img src="../assets/img/team-matheus.webp" data-cat="color" alt="" width="362" height="362" loading="lazy" decoding="async"><img src="../assets/img/interior.webp" data-cat="extras" alt="" width="1400" height="874" loading="lazy" decoding="async"></div>
 
 <header class="header">
   <div class="header-in">
@@ -66,11 +68,13 @@
       <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Menü"><i></i><i></i></button>
     </div>
   </div>
+  <div class="progress" aria-hidden="true"><i></i></div>
 </header>
 
 <div class="mnav" id="mnav" hidden>
   <ul><li><a href="#leistungen"><span>01</span>Leistungen</a></li><li><a href="#team"><span>02</span>Team</a></li><li><a href="#galerie"><span>03</span>Galerie</a></li><li><a href="#bewertungen"><span>04</span>Bewertungen</a></li><li><a href="#kontakt"><span>05</span>Kontakt</a></li></ul>
   <div class="mnav-foot">
+    <div class="lang mnav-lang"><a href="../" hreflang="pt" lang="pt" title="Português" data-cursor="hover">PT</a><span class="lang-sep">/</span><a href="../en/" hreflang="en" lang="en" title="English" data-cursor="hover">EN</a><span class="lang-sep">/</span><span class="lang-cur" aria-current="true">DE</span></div>
     <a href="tel:+351939135742"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4-2 1.3a10 10 0 0 0 4.4 4.4l1.3-2 4 1.6V16a2 2 0 0 1-2 2A13.5 13.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></svg> 939 135 742</a>
     <a href="https://www.google.com/maps/dir/?api=1&destination=Pro+Style+Barbershop%2C+Av.+da+Madalena+101%2C+9020-330+Funchal" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg> Av. da Madalena 101, Funchal</a>
   </div>
@@ -79,7 +83,7 @@
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-bg" aria-hidden="true"><div class="hero-glow"></div><div class="hero-lines"></div></div>
+  <div class="hero-bg" aria-hidden="true"><div class="hero-glow"></div><div class="hero-spot"></div><div class="hero-lines"></div></div>
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="eyebrow hero-in"><span class="status" data-status><i></i><b data-open="Jetzt geöffnet" data-closed="Jetzt geschlossen">Jetzt geöffnet</b><span class="status-sub" data-open="schließt um 19 Uhr" data-closed="öffnet um 10 Uhr">schließt um 19 Uhr</span></span><span class="eyebrow-txt">Barbershop · Funchal, Madeira</span></p>
@@ -102,7 +106,8 @@
     </div>
     <div class="hero-media">
       <div class="hero-frame">
-        <img src="../assets/img/hero-team.webp" srcset="../assets/img/hero-team-sm.webp 640w, ../assets/img/hero-team.webp 1100w" sizes="(max-width: 900px) 100vw, 45vw" alt="Das Team von Pro Style Barbershop in Funchal" width="1100" height="1650" fetchpriority="high">
+        <img src="../assets/img/hero-team.webp" srcset="../assets/img/hero-team-sm.webp 640w, ../assets/img/hero-team.webp 1100w" sizes="(max-width: 900px) 100vw, 40vw" alt="Das Team von Pro Style Barbershop in Funchal" width="1100" height="1650" fetchpriority="high">
+        <span class="hero-frame-shine" aria-hidden="true"></span>
       </div>
       <div class="badge" aria-hidden="true">
         <svg viewBox="0 0 200 200"><defs><path id="circ-de" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ-de">PRO STYLE • BARBERSHOP • FUNCHAL • MADEIRA • </textPath></text></svg>
@@ -119,6 +124,13 @@
   <div class="marquee mq-b" aria-hidden="true"><div class="marquee-track"><span>Funchal</span><i aria-hidden="true">✦</i><span>Madeira</span><i aria-hidden="true">✦</i><span>Av. da Madalena</span><i aria-hidden="true">✦</i><span>Mo–Sa 10–19 Uhr</span><i aria-hidden="true">✦</i><span>Ohne Termin willkommen</span><i aria-hidden="true">✦</i><span>Funchal</span><i aria-hidden="true">✦</i><span>Madeira</span><i aria-hidden="true">✦</i><span>Av. da Madalena</span><i aria-hidden="true">✦</i><span>Mo–Sa 10–19 Uhr</span><i aria-hidden="true">✦</i><span>Ohne Termin willkommen</span><i aria-hidden="true">✦</i><span>Funchal</span><i aria-hidden="true">✦</i><span>Madeira</span><i aria-hidden="true">✦</i><span>Av. da Madalena</span><i aria-hidden="true">✦</i><span>Mo–Sa 10–19 Uhr</span><i aria-hidden="true">✦</i><span>Ohne Termin willkommen</span><i aria-hidden="true">✦</i><span>Funchal</span><i aria-hidden="true">✦</i><span>Madeira</span><i aria-hidden="true">✦</i><span>Av. da Madalena</span><i aria-hidden="true">✦</i><span>Mo–Sa 10–19 Uhr</span><i aria-hidden="true">✦</i><span>Ohne Termin willkommen</span><i aria-hidden="true">✦</i></div></div>
 </section>
 
+<section class="section manifesto">
+  <div class="container">
+    <p class="kicker">Unser Versprechen</p>
+    <p class="manifesto-text">Jeder Schnitt ist <em>maßgeschneidert</em> – mit Präzision, Ruhe und einem Kaffee in der Hand. Hier bist du keine Nummer. <em>Du gehörst dazu.</em></p>
+  </div>
+</section>
+
 <section class="section experience" id="erlebnis">
   <div class="container">
     <div class="sec-head sec-head-row">
@@ -128,22 +140,22 @@
       </div>
       <p class="sec-lead reveal-up">Du kommst für einen Schnitt und gehst mit einem besseren Tag. So beschreiben unsere Kunden Pro Style.</p>
     </div>
-    <div class="perks"><article class="perk reveal-up">
+    <div class="perks"><article class="perk reveal-up" data-spot>
               <span class="perk-num">01</span>
               <div class="perk-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h12v4a6 6 0 0 1-6 6h0a6 6 0 0 1-6-6v-4Z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
               <h3>Kaffee zur Begrüßung</h3>
               <p>Wir empfangen dich mit einem Kaffee oder kaltem Wasser. Kleine Details, großer Unterschied.</p>
-            </article><article class="perk reveal-up">
+            </article><article class="perk reveal-up" data-spot>
               <span class="perk-num">02</span>
               <div class="perk-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 8h11a4 4 0 0 1 3.9 4.8l-.8 4a2.4 2.4 0 0 1-4.2 1L15 16H9l-1.4 1.8a2.4 2.4 0 0 1-4.2-1l-.8-4A4 4 0 0 1 6.5 8Z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="16" cy="11.5" r=".6"/><circle cx="17.5" cy="13.5" r=".6"/></svg></div>
               <h3>PlayStation 5</h3>
               <p>Du wartest auf deinen Termin? Schnapp dir den Controller und spiel eine Runde.</p>
-            </article><article class="perk reveal-up">
+            </article><article class="perk reveal-up" data-spot>
               <span class="perk-num">03</span>
               <div class="perk-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11"/><path d="m9 3.5 3 2 3-2M9 20.5l3-2 3 2"/></svg></div>
               <h3>Klimatisiert</h3>
               <p>Ein kühler, angenehmer Raum – selbst an den heißesten Tagen auf Madeira.</p>
-            </article><article class="perk reveal-up">
+            </article><article class="perk reveal-up" data-spot>
               <span class="perk-num">04</span>
               <div class="perk-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg></div>
               <h3>Ohne Termin willkommen</h3>
@@ -160,113 +172,113 @@
       <h2 class="sec-title split">Wähle deinen <em>Style.</em></h2>
       <p class="sec-lead reveal-up">Klare Preise, keine Überraschungen. Buche deine Leistung direkt auf Booksy – das dauert weniger als eine Minute.</p>
       <a class="btn btn-gold magnetic reveal-up" href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book"><span>Online buchen</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div class="svc-photo reveal-clip"><img src="../assets/img/barber-at-work.webp" alt="Barbier von Pro Style beim Haareschneiden in Funchal" width="900" height="1125" loading="lazy" decoding="async"></div>
+      <div class="svc-photo reveal-clip"><img src="../assets/img/barber-at-work.webp" data-cat="cuts" class="is-active" alt="Haarschnitte — Pro Style Barbershop Funchal" width="900" height="1125" loading="lazy" decoding="async"><img src="../assets/img/team-elias.webp" data-cat="beard" class="" alt="Bart — Pro Style Barbershop Funchal" width="544" height="544" loading="lazy" decoding="async"><img src="../assets/img/hero-team-sm.webp" data-cat="combo" class="" alt="Kombis — Pro Style Barbershop Funchal" width="640" height="960" loading="lazy" decoding="async"><img src="../assets/img/team-matheus.webp" data-cat="color" class="" alt="Farbe — Pro Style Barbershop Funchal" width="362" height="362" loading="lazy" decoding="async"><img src="../assets/img/interior.webp" data-cat="extras" class="" alt="Extras — Pro Style Barbershop Funchal" width="1400" height="874" loading="lazy" decoding="async"></div>
     </div>
     <div class="svc-main">
       <div class="svc-tabs" role="tablist" aria-label="Leistungen &amp; Preise"><button class="svc-tab" role="tab" id="tab-cuts" aria-controls="panel-cuts" aria-selected="true" data-cursor="hover">Haarschnitte<span class="svc-count">05</span></button><button class="svc-tab" role="tab" id="tab-beard" aria-controls="panel-beard" aria-selected="false" data-cursor="hover">Bart<span class="svc-count">03</span></button><button class="svc-tab" role="tab" id="tab-combo" aria-controls="panel-combo" aria-selected="false" data-cursor="hover">Kombis<span class="svc-count">03</span></button><button class="svc-tab" role="tab" id="tab-color" aria-controls="panel-color" aria-selected="false" data-cursor="hover">Farbe<span class="svc-count">04</span></button><button class="svc-tab" role="tab" id="tab-extras" aria-controls="panel-extras" aria-selected="false" data-cursor="hover">Extras<span class="svc-count">03</span></button><span class="svc-ind" aria-hidden="true"></span></div>
-      <div class="svc-panels"><ul class="svc-panel" role="tabpanel" id="panel-cuts" aria-labelledby="tab-cuts"><li class="svc-row">
+      <div class="svc-panels"><ul class="svc-panel" role="tabpanel" id="panel-cuts" aria-labelledby="tab-cuts"><li class="svc-row" data-cat="cuts">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Einfacher Haarschnitt</strong><small>Corte Simples · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">15<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="cuts">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Fade-Haarschnitt</strong><span class="pop">Beliebt</span><small>Corte Degradê · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">17<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="cuts">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Scherenschnitt</strong><small>Corte à Tesoura · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">19<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="cuts">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Scherenschnitt — mittel / lang</strong><small>Corte à Tesoura — Médio / Longo · 1 h</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">27<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="cuts">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Fade + Augenbrauen</strong><span class="pop">Beliebt</span><small>Degradê + Sobrancelha · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">19<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-beard" aria-labelledby="tab-beard" hidden><li class="svc-row">
+                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-beard" aria-labelledby="tab-beard" hidden><li class="svc-row" data-cat="beard">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Bart einfach</strong><small>Barba Simples · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">14<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="beard">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Pro Style Bart</strong><span class="pop">Beliebt</span><small>Barba Pro Style · 1 h</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">30<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="beard">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Bart + Pigmentierung</strong><small>Barba + Pigmento · 40 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">26<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-combo" aria-labelledby="tab-combo" hidden><li class="svc-row">
+                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-combo" aria-labelledby="tab-combo" hidden><li class="svc-row" data-cat="combo">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Haare &amp; Bart</strong><span class="pop">Beliebt</span><small>Cabelo e Barba · 1 h</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">24<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="combo">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Haare &amp; Bart Pro Style</strong><small>Cabelo e Barba Pro Style · 1 h 30</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">42<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="combo">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Schnitt + Pigmentierung</strong><small>Corte + Pigmento · 40 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">29<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-color" aria-labelledby="tab-color" hidden><li class="svc-row">
+                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-color" aria-labelledby="tab-color" hidden><li class="svc-row" data-cat="color">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Färben</strong><small>Coloração · 1 h</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">35<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="color">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Färben + Haarschnitt</strong><small>Coloração + Corte · 1 h 30</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">50<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="color">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Strähnchen</strong><small>Madeixas / Luzes · 1 h 30</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">60<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="color">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Platinblond</strong><span class="pop">Beliebt</span><small>Platinado / Nevou · 1 h 30</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">70<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-extras" aria-labelledby="tab-extras" hidden><li class="svc-row">
+                </a></li></ul><ul class="svc-panel" role="tabpanel" id="panel-extras" aria-labelledby="tab-extras" hidden><li class="svc-row" data-cat="extras">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Augenbrauen</strong><small>Sobrancelha · 15 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">5<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="extras">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Nasenwachs</strong><small>Cera — Nariz · 10 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
                   <span class="svc-price">3<em>€</em></span>
                   <span class="svc-go" aria-hidden="true">Buchen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a></li><li class="svc-row">
+                </a></li><li class="svc-row" data-cat="extras">
                 <a href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>Fade + Nasenwachs</strong><small>Degradê + Cera Nariz · 30 min</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
@@ -335,7 +347,7 @@
   <div class="container story-grid">
     <div class="story-media">
       <div class="story-img reveal-clip"><img src="../assets/img/sign-night.webp" alt="Beleuchtetes Logo von Pro Style Barbershop" width="1024" height="682" loading="lazy" decoding="async"></div>
-      <div class="story-logo reveal-clip"><img src="../assets/img/logo-3d.webp" alt="Pro Style Barbershop logo" width="600" height="600" loading="lazy" decoding="async"></div>
+      <div class="story-logo"><img src="../assets/img/logo-3d.webp" alt="Pro Style Barbershop logo" width="600" height="600" loading="lazy" decoding="async"></div>
     </div>
     <div class="story-copy">
       <p class="kicker">Unsere Geschichte</p>
@@ -350,34 +362,40 @@
   </div>
 </section>
 
-<section class="section gallery" id="galerie">
-  <div class="gallery-pin">
+<section class="gallery" id="galerie">
+  <div class="gal-pin">
     <div class="container gal-head">
-      <div>
+      <div class="gal-title-wrap">
         <p class="kicker">Galerie</p>
-        <h2 class="sec-title split">Tritt <em>ein.</em></h2>
+        <h2 class="sec-title sec-title-sm split">Tritt <em>ein.</em></h2>
       </div>
-      <p class="gal-hint" aria-hidden="true"><span>Ziehen</span><i></i></p>
+      <div class="gal-meta" aria-hidden="true">
+        <span class="gal-count"><b class="gal-cur">01</b> / 06</span>
+        <span class="gal-bar"><i></i></span>
+        <span class="gal-hint">Scrollen / Ziehen</span>
+      </div>
     </div>
-    <div class="gal-track" data-cursor="drag" data-cursor-label="Ziehen"><figure class="g-item g-wide">
+    <div class="gal-viewport">
+      <div class="gal-track"><figure class="g-item g-wide" style="--ar: 1400 / 874">
               <div class="g-img"><img src="../assets/img/interior.webp" alt="Innenraum von Pro Style Barbershop in Funchal mit Barberstühlen" width="1400" height="874" loading="lazy" decoding="async"></div>
               <figcaption><span>01</span>Der Laden</figcaption>
-            </figure><figure class="g-item g-tall">
+            </figure><figure class="g-item g-tall" style="--ar: 900 / 1125">
               <div class="g-img"><img src="../assets/img/barber-at-work.webp" alt="Barbier von Pro Style beim Haareschneiden in Funchal" width="900" height="1125" loading="lazy" decoding="async"></div>
               <figcaption><span>02</span>Bei der Arbeit</figcaption>
-            </figure><figure class="g-item g-tall">
+            </figure><figure class="g-item g-tall" style="--ar: 900 / 1125">
               <div class="g-img"><img src="../assets/img/logo-wall.webp" alt="Wand mit dem Logo von Pro Style Barbershop" width="900" height="1125" loading="lazy" decoding="async"></div>
               <figcaption><span>03</span>Die Marke</figcaption>
-            </figure><figure class="g-item g-wide">
+            </figure><figure class="g-item g-wide" style="--ar: 1024 / 682">
               <div class="g-img"><img src="../assets/img/sign-night.webp" alt="Beleuchtetes Logo von Pro Style Barbershop" width="1024" height="682" loading="lazy" decoding="async"></div>
               <figcaption><span>04</span>Pro Style</figcaption>
-            </figure><figure class="g-item g-tall">
+            </figure><figure class="g-item g-tall" style="--ar: 900 / 1125">
               <div class="g-img"><img src="../assets/img/storefront.webp" alt="Ladenfront von Pro Style Barbershop in der Av. da Madalena, Funchal" width="900" height="1125" loading="lazy" decoding="async"></div>
               <figcaption><span>05</span>Av. da Madalena 101</figcaption>
-            </figure><figure class="g-item g-tall">
+            </figure><figure class="g-item g-tall" style="--ar: 900 / 1125">
               <div class="g-img"><img src="../assets/img/window.webp" alt="Schaufenster von Pro Style Barbershop, Funchal" width="900" height="1125" loading="lazy" decoding="async"></div>
               <figcaption><span>06</span>Funchal</figcaption>
             </figure></div>
+    </div>
   </div>
 </section>
 
@@ -393,45 +411,43 @@
         <a href="https://maps.app.goo.gl/f3qpy4afYyYAXmer7" target="_blank" rel="noopener" class="score" data-cursor="hover"><strong>4.8</strong><span><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><small>Google · Bewertungen</small></span></a>
       </div>
     </div>
-  </div>
-  <div class="rev-marquee" data-cursor="drag" data-cursor-label="Ziehen">
-    <div class="rev-track"><article class="review">
+    <div class="rev-grid"><article class="review" data-spot>
               <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">PT</span></div>
               <blockquote><p>Experiência impecável do início ao fim! Fui recebido com um cafezinho logo à entrada, o que demonstra logo a atenção ao detalhe e o respeito pelo cliente. A equipa é super simpática, o ambiente é muito porreiro e o corte ficou perfeito. Recomendo vivamente!</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">D</span><span><strong>Diogo</strong><small>Google-Bewertung · vor 1 Woche</small></span></footer>
-            </article><article class="review">
-              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN</span></div>
-              <blockquote><p>Alvaro is easily the best barber in Madeira. We’ve been coming to him for years, so we were thrilled to hear he’s opened his own place. I trust him completely with my haircuts, as well as those for my two boys. He is always smiling, incredibly sociable, and makes everyone feel so welcome the moment they walk in.</p></blockquote>
-              <footer><span class="avatar" aria-hidden="true">F</span><span><strong>Francisco Abreu</strong><small>Google-Bewertung · vor 3 Monaten</small></span></footer>
-            </article><article class="review">
-              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN</span></div>
-              <blockquote><p>Amazing guys, very friendly, clean and nice work! Great work with hair, beard, you can drink coffee, water, play with PlayStation 5, and enjoy some good time! 💪🏻</p></blockquote>
-              <footer><span class="avatar" aria-hidden="true">P</span><span><strong>Pietro Manara</strong><small>Google-Bewertung · vor 1 Monat</small></span></footer>
-            </article><article class="review">
+            </article><article class="review" data-spot>
               <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">PT</span></div>
               <blockquote><p>Um grande corte de cabelo pode mudar a forma como uma pessoa se apresenta ao mundo, e é exatamente isso que acontece sempre que me sento na cadeira do Alvaro.</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">T</span><span><strong>Troy</strong><small>Google-Bewertung · vor 4 Monaten</small></span></footer>
-            </article><article class="review">
-              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN · IT</span></div>
-              <blockquote><p>Best barber in Funchal, very professionale and good price! Per 🇮🇹 consigliato alla grande!</p></blockquote>
-              <footer><span class="avatar" aria-hidden="true">L</span><span><strong>Luca Venturini</strong><small>Google-Bewertung · vor 1 Monat</small></span></footer>
-            </article><article class="review">
+            </article><article class="review" data-spot>
               <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">PT</span></div>
               <blockquote><p>Top. Sem marcação, aguardei e done! Simpáticos e profissionais. A loja está bem decorada, fresca (AC) e possibilidade de “bater” uma play. Tooooop. 🤙🏻</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">S</span><span><strong>Samuel Pedroso</strong><small>Google-Bewertung · vor 4 Monaten</small></span></footer>
-            </article><article class="review">
+            </article><article class="review" data-spot>
+              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN · IT</span></div>
+              <blockquote><p>Best barber in Funchal, very professionale and good price! Per 🇮🇹 consigliato alla grande!</p></blockquote>
+              <footer><span class="avatar" aria-hidden="true">L</span><span><strong>Luca Venturini</strong><small>Google-Bewertung · vor 1 Monat</small></span></footer>
+            </article><article class="review" data-spot>
+              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN</span></div>
+              <blockquote><p>Alvaro is easily the best barber in Madeira. We’ve been coming to him for years, so we were thrilled to hear he’s opened his own place. I trust him completely with my haircuts, as well as those for my two boys. He is always smiling, incredibly sociable, and makes everyone feel so welcome the moment they walk in.</p></blockquote>
+              <footer><span class="avatar" aria-hidden="true">F</span><span><strong>Francisco Abreu</strong><small>Google-Bewertung · vor 3 Monaten</small></span></footer>
+            </article><article class="review" data-spot>
+              <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN</span></div>
+              <blockquote><p>Amazing guys, very friendly, clean and nice work! Great work with hair, beard, you can drink coffee, water, play with PlayStation 5, and enjoy some good time! 💪🏻</p></blockquote>
+              <footer><span class="avatar" aria-hidden="true">P</span><span><strong>Pietro Manara</strong><small>Google-Bewertung · vor 1 Monat</small></span></footer>
+            </article><article class="review" data-spot>
               <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">FR</span></div>
               <blockquote><p>Au top, des pros, super team, ambiance de fou… Je recommande vivement. Merci encore</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">D</span><span><strong>David de Sousa</strong><small>Google-Bewertung · vor 2 Monaten</small></span></footer>
-            </article><article class="review">
+            </article><article class="review" data-spot>
               <div class="review-top"><span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></span><span class="review-lang">EN</span></div>
               <blockquote><p>Great barber shop around the corner. Worth to visit. Jolly and happy people.</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">O</span><span><strong>Ohi Farhin</strong><small>Google-Bewertung · vor 6 Monaten</small></span></footer>
             </article></div>
-  </div>
-  <div class="container rev-links">
-    <a class="link-arrow" href="https://maps.app.goo.gl/f3qpy4afYyYAXmer7" target="_blank" rel="noopener" data-cursor="hover">Auf Google ansehen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a class="link-arrow" href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="hover">Auf Booksy ansehen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="rev-links">
+      <a class="link-arrow" href="https://maps.app.goo.gl/f3qpy4afYyYAXmer7" target="_blank" rel="noopener" data-cursor="hover">Auf Google ansehen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="link-arrow" href="https://prostyle38.booksy.com" target="_blank" rel="noopener" data-cursor="hover">Auf Booksy ansehen <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -481,7 +497,7 @@
 
 <section class="section faq" id="faq">
   <div class="container faq-grid">
-    <div>
+    <div class="faq-side">
       <p class="kicker">Häufige Fragen</p>
       <h2 class="sec-title split">Alles, was du <em>wissen musst.</em></h2>
     </div>
@@ -524,7 +540,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-big" aria-hidden="true">PRO STYLE</div>
+    <div class="footer-big" aria-hidden="true"><span>P</span><span>R</span><span>O</span><span>&nbsp;</span><span>S</span><span>T</span><span>Y</span><span>L</span><span>E</span></div>
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="wordmark wm-lg"><svg class="crown" viewBox="0 0 64 44" aria-hidden="true"><path class="crown-path" d="M4 14l12 10L32 4l16 20 12-10-5 22H9L4 14Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path class="crown-base" d="M9 39h46" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg><span class="wm-text"><span class="wm-pro">PRO STYLE</span><span class="wm-script">Barbershop</span></span></span>

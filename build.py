@@ -82,10 +82,19 @@ def svc_name(lang, pt, en):
     return {"pt": pt, "en": en, "de": SERVICES_DE.get(pt, en)}[lang]
 
 
+SVC_IMG = {"cuts": ("barber-at-work", 900, 1125), "beard": ("team-elias", 544, 544), "combo": ("hero-team-sm", 640, 960),
+           "color": ("team-matheus", 362, 362), "extras": ("interior", 1400, 874)}
+
 # Справжні відгуки з Google Maps (оригінальною мовою автора)
 REVIEWS = [
     {"name": "Diogo", "when": {"pt": "há 1 semana", "en": "1 week ago", "de": "vor 1 Woche"}, "lang": "PT",
      "text": "Experiência impecável do início ao fim! Fui recebido com um cafezinho logo à entrada, o que demonstra logo a atenção ao detalhe e o respeito pelo cliente. A equipa é super simpática, o ambiente é muito porreiro e o corte ficou perfeito. Recomendo vivamente!"},
+    {"name": "Troy", "when": {"pt": "há 4 meses", "en": "4 months ago", "de": "vor 4 Monaten"}, "lang": "PT",
+     "text": "Um grande corte de cabelo pode mudar a forma como uma pessoa se apresenta ao mundo, e é exatamente isso que acontece sempre que me sento na cadeira do Alvaro."},
+    {"name": "Samuel Pedroso", "when": {"pt": "há 4 meses", "en": "4 months ago", "de": "vor 4 Monaten"}, "lang": "PT",
+     "text": "Top. Sem marcação, aguardei e done! Simpáticos e profissionais. A loja está bem decorada, fresca (AC) e possibilidade de “bater” uma play. Tooooop. 🤙🏻"},
+    {"name": "Luca Venturini", "when": {"pt": "há 1 mês", "en": "1 month ago", "de": "vor 1 Monat"}, "lang": "EN · IT",
+     "text": "Best barber in Funchal, very professionale and good price! Per 🇮🇹 consigliato alla grande!"},
     {"name": "Francisco Abreu", "when": {"pt": "há 3 meses", "en": "3 months ago", "de": "vor 3 Monaten"}, "lang": {"pt": "PT", "en": "EN"},
      "text": {
          "pt": "O Alvaro é, sem dúvida, o melhor barbeiro da Madeira. Já o seguimos há anos e ficámos muito contentes por saber que ele abriu o seu próprio espaço. Confio nele a 100% para cortar o meu cabelo e o dos meus dois filhos. Ele está sempre bem-disposto, é super sociável e faz com que toda a gente se sinta em casa logo que entra na barbearia.",
@@ -93,12 +102,6 @@ REVIEWS = [
      }},
     {"name": "Pietro Manara", "when": {"pt": "há 1 mês", "en": "1 month ago", "de": "vor 1 Monat"}, "lang": "EN",
      "text": "Amazing guys, very friendly, clean and nice work! Great work with hair, beard, you can drink coffee, water, play with PlayStation 5, and enjoy some good time! 💪🏻"},
-    {"name": "Troy", "when": {"pt": "há 4 meses", "en": "4 months ago", "de": "vor 4 Monaten"}, "lang": "PT",
-     "text": "Um grande corte de cabelo pode mudar a forma como uma pessoa se apresenta ao mundo, e é exatamente isso que acontece sempre que me sento na cadeira do Alvaro."},
-    {"name": "Luca Venturini", "when": {"pt": "há 1 mês", "en": "1 month ago", "de": "vor 1 Monat"}, "lang": "EN · IT",
-     "text": "Best barber in Funchal, very professionale and good price! Per 🇮🇹 consigliato alla grande!"},
-    {"name": "Samuel Pedroso", "when": {"pt": "há 4 meses", "en": "4 months ago", "de": "vor 4 Monaten"}, "lang": "PT",
-     "text": "Top. Sem marcação, aguardei e done! Simpáticos e profissionais. A loja está bem decorada, fresca (AC) e possibilidade de “bater” uma play. Tooooop. 🤙🏻"},
     {"name": "David de Sousa", "when": {"pt": "há 2 meses", "en": "2 months ago", "de": "vor 2 Monaten"}, "lang": "FR",
      "text": "Au top, des pros, super team, ambiance de fou… Je recommande vivement. Merci encore"},
     {"name": "Ohi Farhin", "when": {"pt": "há 6 meses", "en": "6 months ago", "de": "vor 6 Monaten"}, "lang": "EN",
@@ -135,6 +138,8 @@ T = {
         "badge": "PRO STYLE • BARBERSHOP • FUNCHAL • MADEIRA • ",
         "marquee1": ["Degradê", "Barba Pro Style", "Corte à Tesoura", "Platinado", "Pigmentação", "Sobrancelha"],
         "marquee2": ["Funchal", "Madeira", "Av. da Madalena", "Seg–Sáb 10h–19h", "Walk-ins bem-vindos"],
+        "manifesto_kicker": "A nossa promessa",
+        "manifesto": "Cada corte é feito <em>à medida</em> — com precisão, calma e um café na mão. Aqui não és um número. <em>És da casa.</em>",
         "exp_kicker": "A experiência",
         "exp_title": "Mais do que <em>um corte.</em>",
         "exp_lead": "Entras para cortar o cabelo e sais com o dia melhor. É assim que os nossos clientes descrevem a Pro Style.",
@@ -224,6 +229,8 @@ T = {
         "badge": "PRO STYLE • BARBERSHOP • FUNCHAL • MADEIRA • ",
         "marquee1": ["Skin Fade", "Pro Style Beard", "Scissor Cut", "Platinum", "Pigmentation", "Eyebrows"],
         "marquee2": ["Funchal", "Madeira", "Av. da Madalena", "Mon–Sat 10am–7pm", "Walk-ins welcome"],
+        "manifesto_kicker": "Our promise",
+        "manifesto": "Every cut is <em>tailor-made</em> — with precision, patience and a coffee in hand. Here you’re not a number. <em>You’re family.</em>",
         "exp_kicker": "The experience",
         "exp_title": "More than <em>a haircut.</em>",
         "exp_lead": "You come in for a cut and leave with a better day. That’s how our clients describe Pro Style.",
@@ -315,6 +322,8 @@ T["de"] = {
     "badge": "PRO STYLE • BARBERSHOP • FUNCHAL • MADEIRA • ",
     "marquee1": ["Skin Fade", "Pro Style Bart", "Scherenschnitt", "Platinblond", "Pigmentierung", "Augenbrauen"],
     "marquee2": ["Funchal", "Madeira", "Av. da Madalena", "Mo–Sa 10–19 Uhr", "Ohne Termin willkommen"],
+    "manifesto_kicker": "Unser Versprechen",
+    "manifesto": "Jeder Schnitt ist <em>maßgeschneidert</em> – mit Präzision, Ruhe und einem Kaffee in der Hand. Hier bist du keine Nummer. <em>Du gehörst dazu.</em>",
     "exp_kicker": "Das Erlebnis",
     "exp_title": "Mehr als <em>ein Haarschnitt.</em>",
     "exp_lead": "Du kommst für einen Schnitt und gehst mit einem besseren Tag. So beschreiben unsere Kunden Pro Style.",
@@ -501,7 +510,7 @@ def render(lang):
         return f'<div class="marquee {cls}" aria-hidden="true"><div class="marquee-track">{chunk * 4}</div></div>'
 
     perks = "".join(
-        f'''<article class="perk reveal-up">
+        f'''<article class="perk reveal-up" data-spot>
               <span class="perk-num">0{i+1}</span>
               <div class="perk-ico">{icon(k)}</div>
               <h3>{escape(h)}</h3>
@@ -521,7 +530,7 @@ def render(lang):
             name = svc_name(lang, pt, en)
             sub = en if lang == "pt" else pt
             badge = f'<span class="pop">{escape(t["popular"])}</span>' if pop else ""
-            rows.append(f'''<li class="svc-row">
+            rows.append(f'''<li class="svc-row" data-cat="{cat}">
                 <a href="{BOOKSY}" target="_blank" rel="noopener" data-cursor="book">
                   <span class="svc-name"><strong>{escape(name)}</strong>{badge}<small>{escape(sub)} · {dur}</small></span>
                   <span class="svc-dots" aria-hidden="true"></span>
@@ -530,6 +539,11 @@ def render(lang):
                 </a></li>''')
         hidden = "" if i == 0 else " hidden"
         panels.append(f'<ul class="svc-panel" role="tabpanel" id="panel-{cat}" aria-labelledby="tab-{cat}"{hidden}>{"".join(rows)}</ul>')
+
+    svc_preview = "".join(f'<img src="{a(f"assets/img/{n}.webp")}" data-cat="{c}" alt="" width="{w}" height="{h}" loading="lazy" decoding="async">' for c, (n, w, h) in SVC_IMG.items())
+    svc_photos = "".join(
+        f'<img src="{a(f"assets/img/{n}.webp")}" data-cat="{c}" class="{"is-active" if i == 0 else ""}" alt="{escape(t["svc_cats"][c])} — Pro Style Barbershop Funchal" width="{w}" height="{h}" loading="lazy" decoding="async">'
+        for i, (c, (n, w, h)) in enumerate(SVC_IMG.items()))
 
     team = "".join(
         f'''<article class="member" data-tilt>
@@ -545,7 +559,7 @@ def render(lang):
             </article>''' for i, m in enumerate(TEAM))
 
     gallery = "".join(
-        f'''<figure class="g-item g-{shape}">
+        f'''<figure class="g-item g-{shape}" style="--ar: {w} / {h}">
               <div class="g-img"><img src="{a(f"assets/img/{n}.webp")}" alt="{escape(t['gal_alts'][n])}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>
               <figcaption><span>0{i+1}</span>{escape(t['gal_caps'][n])}</figcaption>
             </figure>''' for i, (n, w, h, shape) in enumerate(GALLERY))
@@ -555,7 +569,7 @@ def render(lang):
         return v.get(lang, v['en']) if isinstance(v, dict) else v
 
     reviews = "".join(
-        f'''<article class="review">
+        f'''<article class="review" data-spot>
               <div class="review-top">{STARS5}<span class="review-lang">{escape(rv(r, 'lang'))}</span></div>
               <blockquote><p>{escape(rv(r, 'text'))}</p></blockquote>
               <footer><span class="avatar" aria-hidden="true">{escape(r['name'][0])}</span><span><strong>{escape(r['name'])}</strong><small>{escape(t['rev_src'])} · {escape(rv(r, 'when'))}</small></span></footer>
@@ -625,12 +639,14 @@ def render(lang):
     {CROWN}
     <div class="loader-word"><span>P</span><span>R</span><span>O</span><span>&nbsp;</span><span>S</span><span>T</span><span>Y</span><span>L</span><span>E</span></div>
     <div class="loader-bar"><i></i></div>
-    <p class="loader-sub">{escape(t['loader'])}</p>
+    <p class="loader-sub"><span>{escape(t['loader'])}</span><b class="loader-count">0</b></p>
   </div>
 </div>
+<div class="wipe" aria-hidden="true"><div class="wipe-gold"></div><div class="wipe-dark">{CROWN}</div></div>
 
 <div class="cursor" aria-hidden="true"><div class="cursor-dot"></div><div class="cursor-ring"><span class="cursor-label"></span></div></div>
 <div class="grain" aria-hidden="true"></div>
+<div class="svc-preview" aria-hidden="true">{svc_preview}</div>
 
 <header class="header">
   <div class="header-in">
@@ -644,11 +660,13 @@ def render(lang):
       <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="{escape(t['menu'])}"><i></i><i></i></button>
     </div>
   </div>
+  <div class="progress" aria-hidden="true"><i></i></div>
 </header>
 
 <div class="mnav" id="mnav" hidden>
   <ul>{''.join(f'<li><a href="{h}"><span>0{i+1}</span>{escape(l)}</a></li>' for i, (h, l) in enumerate(t['nav']))}</ul>
   <div class="mnav-foot">
+    <div class="lang mnav-lang">{lang_switch}</div>
     <a href="tel:{PHONE_INTL}">{icon('phone')} {PHONE_DISPLAY}</a>
     <a href="{MAPS_DIR}" target="_blank" rel="noopener">{icon('pin')} Av. da Madalena 101, Funchal</a>
   </div>
@@ -657,7 +675,7 @@ def render(lang):
 <main id="main">
 
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-bg" aria-hidden="true"><div class="hero-glow"></div><div class="hero-lines"></div></div>
+  <div class="hero-bg" aria-hidden="true"><div class="hero-glow"></div><div class="hero-spot"></div><div class="hero-lines"></div></div>
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="eyebrow hero-in"><span class="status" data-status><i></i><b data-open="{escape(t['status_open'])}" data-closed="{escape(t['status_closed'])}">{escape(t['status_open'])}</b><span class="status-sub" data-open="{escape(t['status_closes'])}" data-closed="{escape(t['status_opens'])}">{escape(t['status_closes'])}</span></span><span class="eyebrow-txt">{escape(t['hero_eyebrow'])}</span></p>
@@ -680,7 +698,8 @@ def render(lang):
     </div>
     <div class="hero-media">
       <div class="hero-frame">
-        <img src="{a('assets/img/hero-team.webp')}" srcset="{a('assets/img/hero-team-sm.webp')} 640w, {a('assets/img/hero-team.webp')} 1100w" sizes="(max-width: 900px) 100vw, 45vw" alt="{escape(HERO_ALT[lang])}" width="1100" height="1650" fetchpriority="high">
+        <img src="{a('assets/img/hero-team.webp')}" srcset="{a('assets/img/hero-team-sm.webp')} 640w, {a('assets/img/hero-team.webp')} 1100w" sizes="(max-width: 900px) 100vw, 40vw" alt="{escape(HERO_ALT[lang])}" width="1100" height="1650" fetchpriority="high">
+        <span class="hero-frame-shine" aria-hidden="true"></span>
       </div>
       <div class="badge" aria-hidden="true">
         <svg viewBox="0 0 200 200"><defs><path id="circ-{lang}" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ-{lang}">{escape(t['badge'])}</textPath></text></svg>
@@ -695,6 +714,13 @@ def render(lang):
 <section class="ticker" aria-hidden="true">
   {marquee(t['marquee1'], 'mq-a')}
   {marquee(t['marquee2'], 'mq-b')}
+</section>
+
+<section class="section manifesto">
+  <div class="container">
+    <p class="kicker">{escape(t['manifesto_kicker'])}</p>
+    <p class="manifesto-text">{t['manifesto']}</p>
+  </div>
 </section>
 
 <section class="section experience" id="{ids['experience']}">
@@ -718,7 +744,7 @@ def render(lang):
       <h2 class="sec-title split">{t['svc_title']}</h2>
       <p class="sec-lead reveal-up">{escape(t['svc_lead'])}</p>
       <a class="btn btn-gold magnetic reveal-up" href="{BOOKSY}" target="_blank" rel="noopener" data-cursor="book"><span>{escape(t['book_online'])}</span>{icon('arrow')}</a>
-      <div class="svc-photo reveal-clip"><img src="{a('assets/img/barber-at-work.webp')}" alt="{escape(t['gal_alts']['barber-at-work'])}" width="900" height="1125" loading="lazy" decoding="async"></div>
+      <div class="svc-photo reveal-clip">{svc_photos}</div>
     </div>
     <div class="svc-main">
       <div class="svc-tabs" role="tablist" aria-label="{escape(t['svc_kicker'])}">{''.join(tabs)}<span class="svc-ind" aria-hidden="true"></span></div>
@@ -745,7 +771,7 @@ def render(lang):
   <div class="container story-grid">
     <div class="story-media">
       <div class="story-img reveal-clip"><img src="{a('assets/img/sign-night.webp')}" alt="{escape(t['gal_alts']['sign-night'])}" width="1024" height="682" loading="lazy" decoding="async"></div>
-      <div class="story-logo reveal-clip"><img src="{a('assets/img/logo-3d.webp')}" alt="Pro Style Barbershop logo" width="600" height="600" loading="lazy" decoding="async"></div>
+      <div class="story-logo"><img src="{a('assets/img/logo-3d.webp')}" alt="Pro Style Barbershop logo" width="600" height="600" loading="lazy" decoding="async"></div>
     </div>
     <div class="story-copy">
       <p class="kicker">{escape(t['story_kicker'])}</p>
@@ -760,16 +786,22 @@ def render(lang):
   </div>
 </section>
 
-<section class="section gallery" id="{ids['gallery']}">
-  <div class="gallery-pin">
+<section class="gallery" id="{ids['gallery']}">
+  <div class="gal-pin">
     <div class="container gal-head">
-      <div>
+      <div class="gal-title-wrap">
         <p class="kicker">{escape(t['gal_kicker'])}</p>
-        <h2 class="sec-title split">{t['gal_title']}</h2>
+        <h2 class="sec-title sec-title-sm split">{t['gal_title']}</h2>
       </div>
-      <p class="gal-hint" aria-hidden="true"><span>{escape(t['drag'])}</span><i></i></p>
+      <div class="gal-meta" aria-hidden="true">
+        <span class="gal-count"><b class="gal-cur">01</b> / {len(GALLERY):02d}</span>
+        <span class="gal-bar"><i></i></span>
+        <span class="gal-hint">{escape(t['scroll'])} / {escape(t['drag'])}</span>
+      </div>
     </div>
-    <div class="gal-track" data-cursor="drag" data-cursor-label="{escape(t['drag'])}">{gallery}</div>
+    <div class="gal-viewport">
+      <div class="gal-track">{gallery}</div>
+    </div>
   </div>
 </section>
 
@@ -785,13 +817,11 @@ def render(lang):
         <a href="{MAPS_PLACE}" target="_blank" rel="noopener" class="score" data-cursor="hover"><strong>4.8</strong><span>{STARS5}<small>{escape(t['rev_google'])}</small></span></a>
       </div>
     </div>
-  </div>
-  <div class="rev-marquee" data-cursor="drag" data-cursor-label="{escape(t['drag'])}">
-    <div class="rev-track">{reviews}</div>
-  </div>
-  <div class="container rev-links">
-    <a class="link-arrow" href="{MAPS_PLACE}" target="_blank" rel="noopener" data-cursor="hover">{escape(t['rev_more_google'])} {icon('arrow')}</a>
-    <a class="link-arrow" href="{BOOKSY}" target="_blank" rel="noopener" data-cursor="hover">{escape(t['rev_more_booksy'])} {icon('arrow')}</a>
+    <div class="rev-grid">{reviews}</div>
+    <div class="rev-links">
+      <a class="link-arrow" href="{MAPS_PLACE}" target="_blank" rel="noopener" data-cursor="hover">{escape(t['rev_more_google'])} {icon('arrow')}</a>
+      <a class="link-arrow" href="{BOOKSY}" target="_blank" rel="noopener" data-cursor="hover">{escape(t['rev_more_booksy'])} {icon('arrow')}</a>
+    </div>
   </div>
 </section>
 
@@ -841,7 +871,7 @@ def render(lang):
 
 <section class="section faq" id="{ids['faq']}">
   <div class="container faq-grid">
-    <div>
+    <div class="faq-side">
       <p class="kicker">{escape(t['faq_kicker'])}</p>
       <h2 class="sec-title split">{t['faq_title']}</h2>
     </div>
@@ -866,7 +896,7 @@ def render(lang):
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-big" aria-hidden="true">PRO STYLE</div>
+    <div class="footer-big" aria-hidden="true">{''.join(f'<span>{c}</span>' if c != ' ' else '<span>&nbsp;</span>' for c in 'PRO STYLE')}</div>
     <div class="footer-grid">
       <div class="footer-brand">
         {wordmark('wm-lg')}
