@@ -3,3 +3,4 @@ img/raw/
 __pycache__/
 node_modules/
 *.pyc
+proposta/
